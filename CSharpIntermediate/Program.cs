@@ -8,16 +8,18 @@ namespace CSharpIntermediate
 {
     class Program
     {
-        public class Customer
-        {
-            public int Id;
-            public string Name;
-            
-        }
+      
         static void Main(string[] args)
         {
-           
+            var customer = new Customer();
+            customer.Id = 1;
+            customer.Name = "Qu";
 
+            var order = new Order();
+            customer.Orders.Add(order);
+
+            Console.WriteLine(customer.Id);
+            Console.WriteLine(customer.Name);
 
             Console.ReadLine();
         }
@@ -25,3 +27,4 @@ namespace CSharpIntermediate
 
     }
 }
+
