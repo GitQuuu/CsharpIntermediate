@@ -8,18 +8,16 @@ namespace CSharpIntermediate
 {
     class Program
     {
-      
+
+    
+
         static void Main(string[] args)
         {
-            var customer = new Customer();
-            customer.Id = 1;
-            customer.Name = "Qu";
+            Point point = new Point(100,200);
+            point.Move(5, 10);
 
-            var order = new Order();
-            customer.Orders.Add(order);
-
-            Console.WriteLine(customer.Id);
-            Console.WriteLine(customer.Name);
+            Console.WriteLine($"Point is at X={point.X} and Y={point.Y} ");
+            
 
             Console.ReadLine();
         }
