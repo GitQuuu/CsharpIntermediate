@@ -6,7 +6,7 @@ namespace CSharpIntermediate
 {
     public class Customer
     {
-        public int Id;
+        public int Id = 5;
         public string Name;
         public readonly List<Order> Orders = new List<Order>();
 
@@ -28,5 +28,6 @@ namespace CSharpIntermediate
 
             // ....
         }
+
     }
 }
