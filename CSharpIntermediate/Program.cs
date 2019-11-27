@@ -11,17 +11,12 @@ namespace CSharpIntermediate
     {
         static void Main(string[] args)
         {
-            int number;
-            var result = int.TryParse("abc", out number);
+            Customer customer = new Customer(1);
+            customer.Orders.Add(new Order());
+            customer.Orders.Add(new Order());
 
-            if (result == true)
-            {
-                Console.WriteLine(number);
-            }
-            else
-            {
-                Console.WriteLine("Error");
-            }
+            Console.WriteLine(customer.Orders.Count);
+
 
             Console.ReadLine();
         }

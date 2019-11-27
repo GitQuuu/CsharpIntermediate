@@ -8,28 +8,25 @@ namespace CSharpIntermediate
     {
         public int Id;
         public string Name;
-        public List<Order> Orders;
+        public readonly List<Order> Orders = new List<Order>();
 
-        public Customer()
-        {
-            Orders = new List<Order>();
-        }
+
+
         public Customer(int id)
-            : this()
         {
-            Id = id;
-            
+            this.Id = id;
         }
 
         public Customer(int id, string name)
-            :this(id)
+            : this(id)
         {
-            Id = id;
-            Name = name;
-            
+            this.Name = name;
         }
 
-        
-     
+        public void Promote()
+        {
+
+            // ....
+        }
     }
 }
