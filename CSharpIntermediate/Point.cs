@@ -1,7 +1,12 @@
-﻿namespace CSharpIntermediate
+﻿using System;
+using System.CodeDom;
+
+namespace CSharpIntermediate
 {
     public class Point
     {
+        
+
         public int X;
         public int Y;
 
@@ -19,7 +24,13 @@
 
         public void Move(Point newLocation)
         {
+            if (newLocation == null)
+            {
+                throw new ArgumentNullException("newLocation");
+            }
+
             Move(newLocation.X, newLocation.Y);
         }
     }
 }
+
